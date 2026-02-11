@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Пчела - Помощь в поиске работы и подборе персонала</title>
+    <title>Пчёла - Помощь в поиске работы и подборе персонала</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #2A6BCC;
-            --primary-dark: #1E4D99;
-            --secondary: #FF9800;
+            --primary: #FFC107;
+            --primary-dark: #FFA000;
+            --secondary: #795548;
             --dark: #2C3E50;
             --light: #F8F9FA;
             --gray: #6C757D;
@@ -51,7 +51,7 @@
         .btn {
             display: inline-block;
             background-color: var(--primary);
-            color: white;
+            color: var(--dark);
             padding: 12px 30px;
             border-radius: 30px;
             text-decoration: none;
@@ -70,10 +70,11 @@
         
         .btn-secondary {
             background-color: var(--secondary);
+            color: white;
         }
         
         .btn-secondary:hover {
-            background-color: #E68900;
+            background-color: #5D4037;
         }
         
         /* Header & Navigation */
@@ -97,14 +98,14 @@
             font-family: 'Montserrat', sans-serif;
             font-size: 24px;
             font-weight: 700;
-            color: var(--primary);
+            color: var(--dark);
             display: flex;
             align-items: center;
         }
         
         .logo i {
             margin-right: 10px;
-            color: var(--secondary);
+            color: var(--primary);
         }
         
         nav ul {
@@ -132,14 +133,14 @@
             background: none;
             border: none;
             font-size: 24px;
-            color: var(--primary);
+            color: var(--dark);
             cursor: pointer;
         }
         
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: white;
+            color: var(--dark);
             padding: 150px 0 100px;
             text-align: center;
         }
@@ -166,11 +167,12 @@
         
         .btn-outline {
             background-color: transparent;
-            border: 2px solid white;
+            border: 2px solid var(--dark);
+            color: var(--dark);
         }
         
         .btn-outline:hover {
-            background-color: white;
+            background-color: var(--dark);
             color: var(--primary);
         }
         
@@ -193,7 +195,7 @@
             position: absolute;
             width: 70px;
             height: 4px;
-            background-color: var(--secondary);
+            background-color: var(--primary);
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
@@ -230,46 +232,46 @@
             margin-bottom: 15px;
         }
         
-        /* Telegram Section */
-        .telegram-section {
-            background-color: #F0F7FF;
+        /* Messenger Section */
+        .messenger-section {
+            background-color: #FFF8E1;
         }
         
-        .telegram-container {
+        .messenger-container {
             display: flex;
             align-items: center;
             flex-wrap: wrap;
             gap: 50px;
         }
         
-        .telegram-content {
+        .messenger-content {
             flex: 1;
             min-width: 300px;
         }
         
-        .telegram-image {
+        .messenger-image {
             flex: 1;
             min-width: 300px;
             text-align: center;
         }
         
-        .telegram-image img {
+        .messenger-image img {
             max-width: 100%;
             border-radius: 10px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
         
-        .telegram-features {
+        .messenger-features {
             margin: 30px 0;
         }
         
-        .telegram-feature {
+        .messenger-feature {
             display: flex;
             align-items: center;
             margin-bottom: 20px;
         }
         
-        .telegram-feature i {
+        .messenger-feature i {
             color: var(--success);
             font-size: 24px;
             margin-right: 15px;
@@ -287,7 +289,7 @@
         }
         
         .franchise-section .section-title h2:after {
-            background-color: var(--secondary);
+            background-color: var(--primary);
         }
         
         .franchise-content {
@@ -319,8 +321,16 @@
         
         .benefit i {
             font-size: 40px;
-            color: var(--secondary);
+            color: var(--primary);
             margin-bottom: 15px;
+        }
+        
+        .note {
+            background-color: rgba(255, 193, 7, 0.2);
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 0 10px 10px 0;
         }
         
         /* Contact Section */
@@ -390,7 +400,7 @@
             position: absolute;
             width: 40px;
             height: 3px;
-            background-color: var(--secondary);
+            background-color: var(--primary);
             bottom: 0;
             left: 0;
         }
@@ -434,6 +444,7 @@
         
         .social-links a:hover {
             background-color: var(--primary);
+            color: var(--dark);
             transform: translateY(-3px);
         }
         
@@ -528,8 +539,8 @@
     <header>
         <div class="container header-container">
             <div class="logo">
-                <i class="fas fa-handshake"></i>
-                <span>Пчела</span>
+                <i class="fas fa-bee"></i>
+                <span>Пчёла</span>
             </div>
             
             <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -540,7 +551,7 @@
                 <ul>
                     <li><a href="#home">Главная</a></li>
                     <li><a href="#services">Услуги</a></li>
-                    <li><a href="#telegram">Соцсети</a></li>
+                    <li><a href="#messenger">Мессенджер</a></li>
                     <li><a href="#franchise">Франшиза</a></li>
                     <li><a href="#contact">Контакты</a></li>
                 </ul>
@@ -551,10 +562,10 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
-            <h1>Помогаем найти работу мечты</h1>
-            <p>Мы специализируемся на помощи в поиске работы, предоставляем актуальные вакансии через бот и группы, а также скоро запустим франшизу по подбору сотрудников на вахту</p>
+            <h1>Пчёла - Поможем найти работу!</h1>
+            <p>Специализируемся на помощи в поиске работы и подборе персонала. Используем собственного бота "Пчёла работа" и мессенджер Max для быстрого поиска вакансий.</p>
             <div class="hero-btns">
-                <a href="#telegram" class="btn">Найти работу</a>
+                <a href="#messenger" class="btn">Найти работу в Max</a>
                 <a href="#contact" class="btn btn-outline">Связаться с нами</a>
             </div>
         </div>
@@ -574,15 +585,15 @@
                         <i class="fas fa-search"></i>
                     </div>
                     <h3>Поиск работы</h3>
-                    <p>Помогаем соискателям найти подходящую работу по их квалификации и предпочтениям. Анализируем рынок труда и подбираем лучшие варианты.</p>
+                    <p>Помогаем соискателям найти подходящую работу по их квалификации и предпочтениям.</p>
                 </div>
                 
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fab fa-telegram"></i>
+                        <i class="fas fa-robot"></i>
                     </div>
-                    <h3>бот и группы</h3>
-                    <p>Наш бот ежедневно публикует актуальные вакансии. Присоединяйтесь к нашим группам, чтобы быть в курсе новых предложений.</p>
+                    <h3>Бот "Пчёла работа"</h3>
+                    <p>Наш умный бот помогает быстро найти подходящие вакансии. Просто укажите свои предпочтения и получайте актуальные предложения.</p>
                 </div>
                 
                 <div class="service-card">
@@ -596,50 +607,50 @@
         </div>
     </section>
 
-    <!-- Telegram Section -->
-    <section class="telegram-section" id="telegram">
+    <!-- Messenger Section -->
+    <section class="messenger-section" id="messenger">
         <div class="container">
             <div class="section-title">
-                <h2>Наши каналы</h2>
-                <p>Присоединяйтесь к нашим каналам, чтобы получать самые актуальные вакансии</p>
+                <h2>Мессенджер Max</h2>
+                <p>Присоединяйтесь к нашему каналу в Max, чтобы получать самые актуальные вакансии</p>
             </div>
             
-            <div class="telegram-container">
-                <div class="telegram-content">
-                    <h3>Работа</h3>
-                    <p>Мы создали удобную систему поиска работы через. Наш бот подбирает вакансии по вашим критериям, а в группах мы публикуем эксклюзивные предложения.</p>
+            <div class="messenger-container">
+                <div class="messenger-content">
+                    <h3>Работа в мессенджере Max</h3>
+                    <p>Мы используем российский мессенджер Max для быстрого и удобного поиска работы. Наш канал публикует эксклюзивные вакансии и полезную информацию для соискателей.</p>
                     
-                    <div class="telegram-features">
-                        <div class="telegram-feature">
+                    <div class="messenger-features">
+                        <div class="messenger-feature">
                             <i class="fas fa-check-circle"></i>
                             <div>
-                                <h4>Бот для поиска работы</h4>
-                                <p>Умный бот, который подбирает вакансии под ваши навыки и предпочтения</p>
+                                <h4>Эксклюзивные вакансии</h4>
+                                <p>Публикуем предложения, которых нет на других платформах</p>
                             </div>
                         </div>
                         
-                        <div class="telegram-feature">
+                        <div class="messenger-feature">
                             <i class="fas fa-check-circle"></i>
                             <div>
-                                <h4>Группы по регионам</h4>
-                                <p></p>
+                                <h4>Быстрые уведомления</h4>
+                                <p>Получайте мгновенные оповещения о новых вакансиях</p>
                             </div>
                         </div>
                         
-                        <div class="telegram-feature">
+                        <div class="messenger-feature">
                             <i class="fas fa-check-circle"></i>
                             <div>
-                                <h4>Ежедневные обновления</h4>
-                                <p>Новые вакансии публикуются каждый день, включая выходные</p>
+                                <h4>Прямой контакт</h4>
+                                <p>Общайтесь напрямую с работодателями через мессенджер</p>
                             </div>
                         </div>
                     </div>
                     
-                    <a href="#" class="btn btn-secondary">Присоединиться к каналу</a>
+                    <a href="https://max.ru/id383703376690_biz" target="_blank" class="btn btn-secondary">Перейти в канал Max</a>
                 </div>
                 
-                <div class="telegram-image">
-                    <img src="https://cdn.pixabay.com/photo/2020/10/17/13/21/telegram-5662082_1280.png" alt="Telegram интерфейс">
+                <div class="messenger-image">
+                    <img src="https://cdn.pixabay.com/photo/2020/10/17/13/21/telegram-5662082_1280.png" alt="Мессенджер Max">
                 </div>
             </div>
         </div>
@@ -650,19 +661,23 @@
         <div class="container">
             <div class="section-title">
                 <h2>Франшиза по подбору персонала</h2>
-                <p>Станьте частью нашей сети по подбору сотрудников на вахту</p>
+                <p>Планы на будущее - развитие сети по подбору сотрудников на вахту</p>
             </div>
             
             <div class="franchise-content">
-                <p>Мы скоро запускаем франшизу для предпринимателей, которые хотят открыть собственный бизнес по подбору персонала на вахтовую работу. Мы предоставляем проверенную бизнес-модель, обучение, маркетинговую поддержку и доступ к нашей базе соискателей.</p>
+                <div class="note">
+                    <p><strong>Важная информация:</strong> На данный момент франшиза еще не запущена, но мы активно работаем над этим проектом и планируем запуск в ближайшем будущем.</p>
+                </div>
                 
-                <a href="#contact" class="btn">Узнать о франшизе</a>
+                <p>Мы разрабатываем франшизу для предпринимателей, которые хотят открыть собственный бизнес по подбору персонала на вахтовую работу. В планах - предоставление проверенной бизнес-модели, обучение, маркетинговая поддержка и доступ к нашей базе соискателей.</p>
+                
+                <a href="#contact" class="btn">Узнать о будущей франшизе</a>
                 
                 <div class="franchise-benefits">
                     <div class="benefit">
                         <i class="fas fa-chart-line"></i>
-                        <h4>Прибыльный бизнес</h4>
-                        <p>Высокомаржинальная ниша с постоянным спросом</p>
+                        <h4>Перспективный бизнес</h4>
+                        <p>Высокомаржинальная ниша с постоянным спросом на вахтовиков</p>
                     </div>
                     
                     <div class="benefit">
@@ -697,7 +712,7 @@
                         <i class="fas fa-phone"></i>
                         <div>
                             <h4>Телефон</h4>
-                            <p>+7 (999) 123-45-67</p>
+                            <p>8 (904) 120-49-59</p>
                         </div>
                     </div>
                     
@@ -705,16 +720,23 @@
                         <i class="fas fa-envelope"></i>
                         <div>
                             <h4>Email</h4>
-                            <p>info@careerconnect.ru</p>
+                            <p>mebelll237@gmail.com</p>
                         </div>
                     </div>
-                    
                     
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
                             <h4>Адрес</h4>
-                            <p>г. Москва, ул. Трудовая, д. 15, офис 304</p>
+                            <p>Иркутская область, г. Байкальск, ул. Гагарина, д. 7</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-robot"></i>
+                        <div>
+                            <h4>Наш бот</h4>
+                            <p>"Пчёла работа" - умный помощник по поиску вакансий</p>
                         </div>
                     </div>
                 </div>
@@ -738,14 +760,13 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <div class="logo">
-                        <i class="fas fa-handshake"></i>
-                        <span>CareerConnect</span>
+                        <i class="fas fa-bee"></i>
+                        <span>Пчёла</span>
                     </div>
-                    <p>Мы помогаем людям найти работу своей мечты и компаниям - подходящих сотрудников. Присоединяйтесь к нашему сообществу!</p>
+                    <p>Мы помогаем людям найти работу и компаниям - подходящих сотрудников. Используем бота "Пчёла работа" и мессенджер Max для быстрого поиска.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-telegram"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="https://max.ru/id383703376690_biz" target="_blank"><i class="fas fa-comment-dots"></i></a>
+                        <a href="#"><i class="fas fa-robot"></i></a>
                     </div>
                 </div>
                 
@@ -754,7 +775,7 @@
                     <ul class="footer-links">
                         <li><a href="#home">Главная</a></li>
                         <li><a href="#services">Услуги</a></li>
-                        <li><a href="#telegram">Telegram</a></li>
+                        <li><a href="#messenger">Мессенджер Max</a></li>
                         <li><a href="#franchise">Франшиза</a></li>
                     </ul>
                 </div>
@@ -763,24 +784,25 @@
                     <h3>Наши услуги</h3>
                     <ul class="footer-links">
                         <li><a href="#services">Поиск работы</a></li>
-                        <li><a href="#telegram">Telegram-бот</a></li>
+                        <li><a href="#services">Бот "Пчёла работа"</a></li>
                         <li><a href="#services">Подбор на вахту</a></li>
-                        <li><a href="#franchise">Франшиза</a></li>
+                        <li><a href="#franchise">Будущая франшиза</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-col">
                     <h3>Контакты</h3>
                     <ul class="footer-links">
-                        <li><i class="fas fa-phone"></i> +7 (999) 123-45-67</li>
-                        <li><i class="fas fa-envelope"></i> info@careerconnect.ru</li>
-                        <li><i class="fab fa-telegram"></i> @careerconnect_bot</li>
+                        <li><i class="fas fa-phone"></i> 8 (904) 120-49-59</li>
+                        <li><i class="fas fa-envelope"></i> mebelll237@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Байкальск, ул. Гагарина, 7</li>
+                        <li><i class="fas fa-robot"></i> Бот: Пчёла работа</li>
                     </ul>
                 </div>
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 CareerConnect. Все права защищены.</p>
+                <p>&copy; 2026 "Пчёла"</p>
             </div>
         </div>
     </footer>
